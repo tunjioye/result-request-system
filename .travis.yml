@@ -11,4 +11,6 @@ before_script:
   - composer install --prefer-source --no-interaction --dev
 
 script:
+  - php artisan key:generate
+  - php artisan config:cache
   - ./vendor/phpunit/phpunit/phpunit tests
