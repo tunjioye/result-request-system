@@ -20,4 +20,10 @@
         </div>
     </div>
 </div>
+
+<br/>
+
+<card heading="Card Heading">
+    <div>Card Body</div>
+</card>
 @endsection

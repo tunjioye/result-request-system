@@ -3,10 +3,10 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">Example Component</div>
+                    <div class="card-header">{{ heading }}</div>
 
                     <div class="card-body">
-                        I'm an example component.
+                        <slot></slot>
                     </div>
                 </div>
             </div>
@@ -16,8 +16,13 @@
 
 <script>
     export default {
-        mounted() {
-            console.log('Component mounted.')
+        props: {
+            heading: {
+                type: String,
+                default: function () {
+                    return 'Example Component'
+                }
+            }
         }
     }
 </script>
