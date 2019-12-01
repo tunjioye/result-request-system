@@ -4,7 +4,7 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <title>Laravel</title>
+        <title>{{ config('app.name', 'Laravel') }}</title>
 
         <!-- Fonts -->
         <link
@@ -86,6 +86,10 @@
                 <div class="title m-b-md">
                     Laravel
                 </div>
+
+                {{-- <p>
+                    a project by <strong>Ibukun Gabriel</strong>
+                </p> --}}
 
                 <div class="links">
                     <a href="https://laravel.com/docs">Docs</a>
