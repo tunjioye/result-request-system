@@ -19,7 +19,12 @@ window.Vue = require('vue');
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
+<<<<<<< HEAD
 //Vue.component('card', require('./components/card.vue').default);
+=======
+Vue.component('card', require('./components/card.vue').default);
+Vue.component('stats-card', require('./components/stats-card.vue').default);
+>>>>>>> 34ad59e0359d28407dab48333662762a79367606
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
