@@ -3,6 +3,11 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
+        <div class="col-md-4">
+            <card heading="Card Heading">
+                <div>Card Body</div>
+            </card>
+        </div>
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">Dashboard</div>
