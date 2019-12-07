@@ -17,13 +17,17 @@
                     You are logged in!
                 </div>
             </div>
+
+            <br/>
+
+            <card heading="Card Heading">
+                <div>Card Body</div>
+            </card>
+
+            <br/>
+
+            <stats-card title="Stats 01" description="description of stats"></stats-card>
         </div>
     </div>
 </div>
-
-<br/>
-
-<card heading="Card Heading">
-    <div>Card Body</div>
-</card>
 @endsection
