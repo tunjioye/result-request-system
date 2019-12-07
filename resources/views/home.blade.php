@@ -4,8 +4,19 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-4">
-            <card heading="Card Heading">
-                <div>Card Body</div>
+            <card heading="Settings">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Dashboard</li>
+                    <li class="list-group-item">Dashboard</li>
+                    <li class="list-group-item">Dashboard</li>
+                </ul>
+            </card><br>
+            <card heading="Billings">
+            <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Dashboard</li>
+                    <li class="list-group-item">Dashboard</li>
+                    <li class="list-group-item">Dashboard</li>
+                </ul>
             </card>
         </div>
         <div class="col-md-8">
@@ -26,22 +37,13 @@
             <br/>
 
             <card heading="Card Heading">
-                <div>Card Body</div>
+                Card Body
             </card>
 
             <br/>
 
-            <stats-card title="Stats 01" description="description of stats"></stats-card>
+            <stat-card title="Stats 01" description="description of stats"></stat-card>
         </div>
     </div>
 </div>
-<<<<<<< HEAD
-
-<br/>
-<input type="text" placeholder="enter the place"/>
-<card heading="Card Heading">
-    <div>Card Body</div>
-</card>
-=======
->>>>>>> 34ad59e0359d28407dab48333662762a79367606
 @endsection

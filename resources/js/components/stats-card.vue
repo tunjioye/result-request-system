@@ -1,7 +1,8 @@
 <template>
-    <div class="stats-card">
+    <div class="stat-card">
         <h4>{{ title }}</h4>
         <div>{{ description }}</div>
+        <div><slot></slot></div>
     </div>
 </template>
 
@@ -11,7 +12,7 @@
             title: {
                 type: String,
                 default: function () {
-                    return 'Title'
+                    return 'blah blah blah'
                 }
             },
             description: {
@@ -25,7 +26,7 @@
 </script>
 
 <style lang="scss" scoped>
-    .stats-card {
+    .stat-card {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
