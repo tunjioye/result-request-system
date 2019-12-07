@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app'),
 
 @section('content')
 <div class="container">
@@ -22,7 +22,7 @@
 </div>
 
 <br/>
-
+<input type="text" placeholder="enter the place"/>
 <card heading="Card Heading">
     <div>Card Body</div>
 </card>
