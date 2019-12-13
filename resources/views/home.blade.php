@@ -36,13 +36,13 @@
 
             <br/>
 
-            <card heading="Card Heading" >
-                goood 
+            <card heading="Card Heading">
+                <div>Card Body</div>
             </card>
 
             <br/>
 
-            <stat-card title="Stats 01" description="description of stats"></stat-card>
+            <stats-card title="Stats 01" description="description of stats"></stats-card>
         </div>
     </div>
 </div>

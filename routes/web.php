@@ -18,3 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/request-result', 'PublicController@requestResult')->name('request-result');
+Route::get('/check-request-status', 'PublicController@checkRequestStatus')->name('check-request-status');
+Route::get('/check-result', 'PublicController@checkResult')->name('check-result');
