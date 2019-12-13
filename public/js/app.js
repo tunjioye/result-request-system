@@ -1852,6 +1852,12 @@ __webpack_require__.r(__webpack_exports__);
       //     return 'Example Component'
       // }
 
+    },
+    noPadding: {
+      type: Boolean,
+      "default": function _default() {
+        return false;
+      }
     }
   }
 });
@@ -6456,7 +6462,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.inner[data-v-c170f44a]{\r\n    padding-left: 0px;\n}\n.inner a[data-v-c170f44a]{\r\n    color: gray;\r\n    text-decoration: none;\n}\n.inner ul li[data-v-c170f44a]:hover{\r\n     border-left: 2px solid black;\n}\r\n", ""]);
+exports.push([module.i, "\n.inner a[data-v-c170f44a]{\r\n    color: gray;\r\n    text-decoration: none;\n}\n.inner ul li[data-v-c170f44a]:hover{\r\n     border-left: 2px solid black;\n}\n.no-padding > .card-body[data-v-c170f44a] {\r\n    padding: 0;\n}\r\n", ""]);
 
 // exports
 
@@ -37980,11 +37986,15 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "card" }, [
-    _c("div", { staticClass: "card-header" }, [_vm._v(_vm._s(_vm.heading))]),
-    _vm._v(" "),
-    _c("div", { staticClass: "card-body inner" }, [_vm._t("default")], 2)
-  ])
+  return _c(
+    "div",
+    { staticClass: "card", class: { "no-padding": _vm.noPadding } },
+    [
+      _c("div", { staticClass: "card-header" }, [_vm._v(_vm._s(_vm.heading))]),
+      _vm._v(" "),
+      _c("div", { staticClass: "card-body inner" }, [_vm._t("default")], 2)
+    ]
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -50247,15 +50257,14 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*!******************************************!*\
   !*** ./resources/js/components/card.vue ***!
   \******************************************/
-/*! no static exports found */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _card_vue_vue_type_template_id_c170f44a_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./card.vue?vue&type=template&id=c170f44a&scoped=true& */ "./resources/js/components/card.vue?vue&type=template&id=c170f44a&scoped=true&");
 /* harmony import */ var _card_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./card.vue?vue&type=script&lang=js& */ "./resources/js/components/card.vue?vue&type=script&lang=js&");
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _card_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _card_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
-/* harmony import */ var _card_vue_vue_type_style_index_0_id_c170f44a_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./card.vue?vue&type=style&index=0&id=c170f44a&scoped=true&lang=css& */ "./resources/js/components/card.vue?vue&type=style&index=0&id=c170f44a&scoped=true&lang=css&");
+/* empty/unused harmony star reexport *//* harmony import */ var _card_vue_vue_type_style_index_0_id_c170f44a_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./card.vue?vue&type=style&index=0&id=c170f44a&scoped=true&lang=css& */ "./resources/js/components/card.vue?vue&type=style&index=0&id=c170f44a&scoped=true&lang=css&");
 /* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -50287,7 +50296,7 @@ component.options.__file = "resources/js/components/card.vue"
 /*!*******************************************************************!*\
   !*** ./resources/js/components/card.vue?vue&type=script&lang=js& ***!
   \*******************************************************************/
-/*! no static exports found */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

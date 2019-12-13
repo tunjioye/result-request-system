@@ -4,14 +4,14 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-4">
-            <card heading="Settings">
+            <card heading="Settings" no-padding>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">Dashboard</li>
                     <li class="list-group-item">Dashboard</li>
                     <li class="list-group-item">Dashboard</li>
                 </ul>
             </card><br>
-            <card heading="Billings">
+            <card heading="Billings" no-padding>
             <ul class="list-group list-group-flush">
                     <li class="list-group-item">Dashboard</li>
                     <li class="list-group-item">Dashboard</li>
@@ -36,8 +36,8 @@
 
             <br/>
 
-            <card heading="Card Heading">
-                Card Body
+            <card heading="Card Heading" >
+                goood 
             </card>
 
             <br/>
