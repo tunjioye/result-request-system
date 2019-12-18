@@ -1,11 +1,22 @@
-@extends('layouts.app')
+@extends('layouts.app'),
 
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-4">
-            <card heading="Card Heading">
-                <div>Card Body</div>
+            <card heading="Settings" no-padding>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Dashboard</li>
+                    <li class="list-group-item">Dashboard</li>
+                    <li class="list-group-item">Dashboard</li>
+                </ul>
+            </card><br>
+            <card heading="Billings" no-padding>
+            <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Dashboard</li>
+                    <li class="list-group-item">Dashboard</li>
+                    <li class="list-group-item">Dashboard</li>
+                </ul>
             </card>
         </div>
         <div class="col-md-8">
