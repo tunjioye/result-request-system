@@ -18,7 +18,7 @@ class Requester extends Model
      *
      * @var array
      */
-    protected $fillable = ['type', 'organisation_name', 'organisation_address', 'contact_name', 'contact_role', 'contact_number', 'contact_email', 'contact_visibility'];
+    protected $fillable = ['requester_type', 'requester_name', 'requester_address', 'contact_name', 'contact_role', 'contact_email', 'contact_number', 'contact_visibility'];
 
     protected $casts = [
         'contact_visibility' => 'boolean'

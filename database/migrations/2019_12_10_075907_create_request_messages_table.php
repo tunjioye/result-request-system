@@ -13,10 +13,22 @@ class CreateRequestMessagesTable extends Migration
      */
     public function up()
     {
-        Schema::create('request_messages', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->timestamps();
-        });
+        if (!Schema::hasTable('request_messages')) {
+            Schema::create('request_messages', function (Blueprint $table) {
+                $table->bigIncrements('id');
+                $table->unsignedBigInteger('request_id')->nullable()->index();
+                $table->unsignedBigInteger('result_id')->nullable()->index();
+                $table->string('message')->nullable();
+                $table->string('from')->nullable();
+                $table->string('to')->nullable();
+                $table->string('attachments')->nullable();
+                $table->timestamp('read_at')->nullable();
+                $table->timestamps();
+
+                $table->foreign('request_id')->references('id')->on('requests')->onDelete('cascade');
+                $table->foreign('result_id')->references('id')->on('results')->onDelete('cascade');
+            });
+        }
     }
 
     /**

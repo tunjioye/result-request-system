@@ -18,7 +18,7 @@ class School extends Model
      *
      * @var array
      */
-    protected $fillable = ['school_name', 'school_address', 'contact_name', 'contact_role', 'contact_email', 'contact_visibility'];
+    protected $fillable = ['school_name', 'school_address', 'contact_name', 'contact_role', 'contact_email', 'contact_number', 'contact_visibility'];
 
     protected $casts = [
         'contact_visibility' => 'boolean'

@@ -13,10 +13,22 @@ class CreateStudentsTable extends Migration
      */
     public function up()
     {
-        Schema::create('students', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->timestamps();
-        });
+        if (!Schema::hasTable('students')) {
+            Schema::create('students', function (Blueprint $table) {
+                $table->bigIncrements('id');
+                $table->unsignedBigInteger('school_id')->nullable()->index();
+                $table->string('matric_number');
+                $table->string('first_name')->nullable();
+                $table->string('last_name')->nullable();
+                $table->year('graduation_year')->nullable();
+                $table->enum('gender', ['M', 'F'])->nullable();
+                $table->string('email_address')->nullable();
+                $table->string('phone_number')->nullable();
+                $table->timestamps();
+
+                $table->foreign('school_id')->references('id')->on('schools')->onDelete('cascade');
+            });
+        }
     }
 
     /**

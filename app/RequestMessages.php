@@ -18,7 +18,7 @@ class RequestMessages extends Model
      *
      * @var array
      */
-    protected $fillable = ['request_id', 'requester_id', 'school_id', 'student_id', 'result_id', 'message', 'from', 'to', 'attachments'];
+    protected $fillable = ['request_id', 'result_id', 'message', 'from', 'to', 'attachments', 'read_at'];
 
     protected $casts = [
         //

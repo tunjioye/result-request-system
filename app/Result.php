@@ -18,7 +18,7 @@ class Result extends Model
      *
      * @var array
      */
-    protected $fillable = ['school_id', 'student_id', 'year_received', 'result_type', 'description', 'file', 'status'];
+    protected $fillable = ['school_id', 'student_id', 'result_type', 'year_received', 'description', 'file', 'status'];
 
     protected $casts = [
         //

@@ -13,10 +13,24 @@ class CreateRequestsTable extends Migration
      */
     public function up()
     {
-        Schema::create('requests', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->timestamps();
-        });
+        if (!Schema::hasTable('requests')) {
+            Schema::create('requests', function (Blueprint $table) {
+                $table->bigIncrements('id');
+                $table->unsignedBigInteger('requester_id')->nullable()->index();
+                $table->unsignedBigInteger('school_id')->nullable()->index();
+                $table->unsignedBigInteger('student_id')->nullable()->index();
+                $table->string('result_type')->nullable();
+                $table->year('year_received')->nullable();
+                $table->string('purpose')->nullable();
+                $table->enum('status', ['PENDING', 'SUCCESS', 'REJECTED'])->default('PENDING');
+                $table->string('reason')->nullable();
+                $table->timestamps();
+
+                $table->foreign('requester_id')->references('id')->on('requesters')->onDelete('cascade');
+                $table->foreign('school_id')->references('id')->on('schools')->onDelete('cascade');
+                $table->foreign('student_id')->references('id')->on('students')->onDelete('cascade');
+            });
+        }
     }
 
     /**
