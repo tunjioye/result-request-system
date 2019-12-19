@@ -18,7 +18,7 @@ class Student extends Model
      *
      * @var array
      */
-    protected $fillable = ['matric_number', 'first_name', 'last_name', 'graduation_year', 'gender', 'email_address', 'phone_number'];
+    protected $fillable = ['school_id', 'matric_number', 'first_name', 'last_name', 'graduation_year', 'gender', 'email_address', 'phone_number'];
 
     protected $casts = [
         //
