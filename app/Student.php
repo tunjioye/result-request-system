@@ -23,4 +23,28 @@ class Student extends Model
     protected $casts = [
         //
     ];
+
+    /**
+     * Get the school of the student.
+     */
+    public function school()
+    {
+        return $this->belongsTo('App\School');
+    }
+
+    /**
+     * Get the requests of the school.
+     */
+    public function requests()
+    {
+        return $this->hasManys('App\Request');
+    }
+
+    /**
+     * Get the results of the student.
+     */
+    public function results()
+    {
+        return $this->hasManys('App\Result');
+    }
 }

@@ -23,4 +23,20 @@ class School extends Model
     protected $casts = [
         'contact_visibility' => 'boolean'
     ];
+
+    /**
+     * Get the students of the school.
+     */
+    public function students()
+    {
+        return $this->hasManys('App\Student');
+    }
+
+    /**
+     * Get the results of the school.
+     */
+    public function results()
+    {
+        return $this->hasManys('App\Result');
+    }
 }

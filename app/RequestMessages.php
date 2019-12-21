@@ -23,4 +23,20 @@ class RequestMessages extends Model
     protected $casts = [
         //
     ];
+
+    /**
+     * Get the request of the request messages.
+     */
+    public function request()
+    {
+        return $this->belongsTo('App\Request');
+    }
+
+    /**
+     * Get the result associated with the request messages.
+     */
+    public function result()
+    {
+        return $this->belongsTo('App\Result');
+    }
 }

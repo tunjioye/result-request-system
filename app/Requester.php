@@ -23,4 +23,12 @@ class Requester extends Model
     protected $casts = [
         'contact_visibility' => 'boolean'
     ];
+
+    /**
+     * Get the requests of the requester.
+     */
+    public function requests()
+    {
+        return $this->hasManys('App\Request');
+    }
 }

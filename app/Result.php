@@ -23,4 +23,28 @@ class Result extends Model
     protected $casts = [
         //
     ];
+
+    /**
+     * Get the school associated with the result.
+     */
+    public function school()
+    {
+        return $this->belongsTo('App\School');
+    }
+
+    /**
+     * Get the student associated with the result.
+     */
+    public function student()
+    {
+        return $this->belongsTo('App\Student');
+    }
+
+    /**
+     * Get the request messages of the result.
+     */
+    public function request_messages()
+    {
+        return $this->hasManys('App\RequestMessage');
+    }
 }
