@@ -32,7 +32,7 @@
                         <input type="email" class="form-control"  placeholder="Enter Result Type" id="type" Required>  
                     </div>
                     <div class="form-group">
-                        <label for="year">Year Received</label><span class="text-danger">*</span>
+                        <label for="year">Year Received</label>
                         <input type="text" class="form-control"  placeholder="Enter Year Received" id="year" Required>
                     </div>
                 </form>

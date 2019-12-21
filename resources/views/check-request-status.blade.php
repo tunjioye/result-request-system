@@ -12,10 +12,11 @@
               <div class="row ">
                     <div class="col-md-6 offset-md-3">                   
                         <form role="form">
-                            <label for="track" style="width:100%">Request Tracking Number<span class="text-danger">*</span></label>
-                            <div class="form-group" style="display:flex;">
-                                <input type="text" class="form-control"  placeholder="Enter Request Tracking Number" id="track"/>  
-                                <button type="submit" class="btn btn-outline-dark">Check</button>
+                           
+                            <div class="form-group form-inline">
+                                <label for="track" class="">Request Tracking Number<span class="text-danger">*</span></label><br/>
+                                <input type="text" class="form-control col-md-10"  placeholder="Enter Request Tracking Number" id="track"/>  
+                                <button type="submit" class="btn btn-outline-dark col-md-2">Check</button>
                             </div>
                         </form>
                     </div>

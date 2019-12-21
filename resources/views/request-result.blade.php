@@ -46,7 +46,7 @@
                             <option >4</option>
                         </Select><br>
                         <div class="form-group">
-                            <label for="purpose">Purpose of Request</label><span class="text-danger">*</span>
+                            <label for="purpose">Purpose of Request</label>
                             <textarea type="text" class="form-control" placeholder="Purpose of Request" id="purpose" required></textarea>                        
                         </div>
                     </form>
@@ -81,7 +81,7 @@
                         </div>
                         
                         <div class="form-group">
-                            <label for="role">Contact Role</label><span class="text-danger">*</span>
+                            <label for="role">Contact Role</label>
                             <input type="text" class="form-control"  placeholder="Enter Contact Role" id="role" required>  
                         </div>
                         <div class="form-group">
@@ -89,7 +89,7 @@
                             <input type="email" class="form-control"  placeholder="Enter Contact Email" id="email" required>  
                         </div>
                         <div class="form-group">
-                            <label for="num">Contact Number</label><span class="text-danger">*</span>
+                            <label for="num">Contact Number</label>
                             <input type="text" class="form-control"  placeholder="Enter Contact Number" id="num" required>  
                         </div>
                         <div class="form-group">
