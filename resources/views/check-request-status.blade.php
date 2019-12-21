@@ -10,20 +10,20 @@
 
             <card heading="Check Request Status Form">
               <div class="row ">
-                    <div class="col-md-6 offset-md-3">
-                        <h5 class="text-center">Check Result Request Status</h5>                    
+                    <div class="col-md-6 offset-md-3">                   
                         <form role="form">
-                            <div class="form-group">
-                                <input type="text" class="form-control"  placeholder="Enter Request Tracking Number" required>  
+                            <label for="track" style="width:100%">Request Tracking Number<span class="text-danger">*</span></label>
+                            <div class="form-group" style="display:flex;">
+                                <input type="text" class="form-control"  placeholder="Enter Request Tracking Number" id="track"/>  
+                                <button type="submit" class="btn btn-outline-dark">Check</button>
                             </div>
                         </form>
-                    </div>
-                    <div class="col-md-12 text-center">
-                            <button type="submit" class="btn btn-outline-dark">Check</button>
                     </div>
                 </div>
             </card>
         </div>
     </div>
+    <style>
+    </style>
 </div>
 @endsection
