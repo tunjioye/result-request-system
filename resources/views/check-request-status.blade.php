@@ -9,9 +9,22 @@
             <br/>
 
             <card heading="Check Request Status Form">
-                <div>Form comes here ...</div>
+              <div class="row ">
+                    <div class="col-md-6 offset-md-3">                   
+                        <form role="form">
+                           
+                            <div class="form-group form-inline">
+                                <label for="track" class="">Request Tracking Number<span class="text-danger">*</span></label><br/>
+                                <input type="text" class="form-control col-md-10"  placeholder="Enter Request Tracking Number" id="track"/>  
+                                <button type="submit" class="btn btn-outline-dark col-md-2">Check</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </card>
         </div>
     </div>
+    <style>
+    </style>
 </div>
 @endsection
