@@ -10,13 +10,16 @@
 
             <card heading="Check Request Status Form">
               <div class="row ">
-                    <div class="col-md-6 offset-md-3">                   
+                    <div class="col-md-6 offset-md-3">
                         <form role="form">
-                           
-                            <div class="form-group form-inline">
+                            <div class="form-group">
                                 <label for="track" class="">Request Tracking Number<span class="text-danger">*</span></label><br/>
-                                <input type="text" class="form-control col-md-10"  placeholder="Enter Request Tracking Number" id="track"/>  
-                                <button type="submit" class="btn btn-outline-dark col-md-2">Check</button>
+                                <div class="input-group">
+                                    <input type="text" class="form-control"  placeholder="Enter Request Tracking Number" id="track"/>
+                                    <div class="input-group-append">
+                                        <button type="submit" class="btn btn-outline-dark">Check Status</button>
+                                    </div>
+                                </div>
                             </div>
                         </form>
                     </div>
