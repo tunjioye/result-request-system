@@ -19,6 +19,7 @@ class CreateRequestsTable extends Migration
                 $table->unsignedBigInteger('requester_id')->nullable()->index();
                 $table->unsignedBigInteger('school_id')->nullable()->index();
                 $table->unsignedBigInteger('student_id')->nullable()->index();
+                $table->string('tracking_number')->nullable();
                 $table->string('result_type')->nullable();
                 $table->year('year_received')->nullable();
                 $table->string('purpose')->nullable();

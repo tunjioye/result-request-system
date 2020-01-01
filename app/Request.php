@@ -18,7 +18,7 @@ class Request extends Model
      *
      * @var array
      */
-    protected $fillable = ['requester_id', 'school_id', 'student_id', 'result_type', 'year_received', 'purpose', 'status'];
+    protected $fillable = ['requester_id', 'school_id', 'student_id', 'tracking_number', 'result_type', 'year_received', 'purpose', 'status'];
 
     protected $casts = [
         //

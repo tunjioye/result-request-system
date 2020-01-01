@@ -12,6 +12,7 @@ $factory->define(Request::class, function (Faker $faker) {
         'requester_id' => factory(App\Requester::class),
         'school_id' => factory(App\School::class),
         'student_id' => factory(App\Student::class),
+        'tracking_number' => $faker->md5,
         'year_received' => $faker->year,
         'result_type' => $faker->randomElement([
             'MSc DEGREE', 'BEd DEGREE', 'BSc DEGREE', 'BA DEGREE',
