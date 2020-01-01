@@ -11,6 +11,6 @@ class RequestsTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        factory(App\Request::class, 30)->create();
     }
 }

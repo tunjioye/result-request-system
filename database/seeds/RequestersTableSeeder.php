@@ -11,6 +11,6 @@ class RequestersTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        factory(App\Requester::class, 20)->create();
     }
 }
