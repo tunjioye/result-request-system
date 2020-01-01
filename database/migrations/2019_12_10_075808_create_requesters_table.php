@@ -16,7 +16,7 @@ class CreateRequestersTable extends Migration
         if (!Schema::hasTable('requesters')) {
             Schema::create('requesters', function (Blueprint $table) {
                 $table->bigIncrements('id');
-                $table->enum('requesterType', ['UNIVERSITY', 'COMPANY'])->nullable()->default('UNIVERSITY');
+                $table->enum('requester_type', ['UNIVERSITY', 'COMPANY'])->nullable()->default('UNIVERSITY');
                 $table->string('requester_name')->nullable();
                 $table->string('requester_address')->nullable();
                 $table->string('contact_name')->nullable();
