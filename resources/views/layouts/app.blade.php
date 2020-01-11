@@ -15,6 +15,13 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <style type="text/css">
+        .list-group-item.sidenav-active {
+            background-color: #f7f7f7;
+            font-weight: bolder;
+            border-radius: 0 !important;
+        }
+    </style>
 </head>
 <body>
     <div id="app">

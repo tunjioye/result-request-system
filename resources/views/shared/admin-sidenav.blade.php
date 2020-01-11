@@ -2,25 +2,25 @@
     $activeUrl = $activeUrl ?? '/admin/home';
 @endphp
 <ul class="list-group admin-sidenav">
-    <a class="list-group-item border-0{{ ($activeUrl == '/admin/home') ? ' font-weight-bold' : ''}}" href="{{ url('/admin/home') }}">
+    <a class="list-group-item border-0{{ ($activeUrl == '/admin/home') ? ' sidenav-active' : ''}}" href="{{ url('/admin/home') }}">
         Dashboard
     </a>
-    <a class="list-group-item border-0{{ ($activeUrl == '/admin/profile') ? ' font-weight-bold' : ''}}" href="{{ url('/admin/profile') }}">
+    <a class="list-group-item border-0{{ ($activeUrl == '/admin/profile') ? ' sidenav-active' : ''}}" href="{{ url('/admin/profile') }}">
         Profile
     </a>
-    <a class="list-group-item border-0{{ ($activeUrl == '/admin/requests') ? ' font-weight-bold' : ''}}" href="{{ url('/admin/requests')  }}">
+    <a class="list-group-item border-0{{ ($activeUrl == '/admin/requests') ? ' sidenav-active' : ''}}" href="{{ url('/admin/requests')  }}">
         Requests
     </a>
-    <a class="list-group-item border-0{{ ($activeUrl == '/admin/requesters') ? ' font-weight-bold' : ''}}" href="{{ url('/admin/requesters') }}">
+    <a class="list-group-item border-0{{ ($activeUrl == '/admin/requesters') ? ' sidenav-active' : ''}}" href="{{ url('/admin/requesters') }}">
         Requesters
     </a>
-    <a class="list-group-item border-0{{ ($activeUrl == '/admin/results') ? ' font-weight-bold' : ''}}" href="{{ url('/admin/results') }}">
+    <a class="list-group-item border-0{{ ($activeUrl == '/admin/results') ? ' sidenav-active' : ''}}" href="{{ url('/admin/results') }}">
         Results
     </a>
-    <a class="list-group-item border-0{{ ($activeUrl == '/admin/students') ? ' font-weight-bold' : ''}}" href="{{ url('/admin/students') }}">
+    <a class="list-group-item border-0{{ ($activeUrl == '/admin/students') ? ' sidenav-active' : ''}}" href="{{ url('/admin/students') }}">
         Students
     </a>
-    <a class="list-group-item border-0{{ ($activeUrl == '/admin/schools') ? ' font-weight-bold' : ''}}" href="{{ url('/admin/schools') }}">
+    <a class="list-group-item border-0{{ ($activeUrl == '/admin/schools') ? ' sidenav-active' : ''}}" href="{{ url('/admin/schools') }}">
         Schools
     </a>
 </ul>
