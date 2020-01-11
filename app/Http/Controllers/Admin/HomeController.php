@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\UpdateAdminProfile;
 use App\Http\Requests\ChangeUserPassword;
@@ -43,12 +42,12 @@ class HomeController extends Controller
     }
 
     /**
-     * update_profile
+     * updateProfile
      *
      * @param UpdateAdminProfile $request
      * @return void
      */
-    public function update_profile(UpdateAdminProfile $request)
+    public function updateProfile(UpdateAdminProfile $request)
     {
         Auth::user()->update($request->all());
 
@@ -57,12 +56,12 @@ class HomeController extends Controller
     }
 
     /**
-     * change_password
+     * changePassword
      *
      * @param ChangeUserPassword $request
      * @return void
      */
-    public function change_password(ChangeUserPassword $request)
+    public function changePassword(ChangeUserPassword $request)
     {
         $bcrypt = new BcryptHasher;
 

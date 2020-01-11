@@ -25,8 +25,11 @@ Route::namespace('Admin')->group(function () {
             // Matches The "admin.{view}" URL
             Route::get('/home', 'HomeController@index')->name('home');
             Route::get('/profile', 'HomeController@profile')->name('profile');
-            Route::post('/profile', 'HomeController@update_profile')->name('profile.update');
-            Route::post('/password', 'HomeController@change_password')->name('change.password');
+            Route::post('/profile', 'HomeController@updateProfile')->name('profile.update');
+            Route::post('/password', 'HomeController@changePassword')->name('change.password');
+
+            // Manage Requests
+            Route::resource('/requests', 'RequestController');
         });
     });
 });

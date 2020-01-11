@@ -8,6 +8,7 @@
                 @includeIf('shared.admin-sidenav', ['activeUrl' => '/admin/profile'])
             </card>
         </div>
+
         <div class="col-md-8">
             <card heading="Update Profile">
                 <form action="{{ url('/admin/profile') }}" method="POST">

@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
-use App\Requester;
+use App\Student;
 use Illuminate\Http\Request;
 
-class RequesterController extends Controller
+class StudentController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class RequesterController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Requester  $requester
+     * @param  \App\Student  $student
      * @return \Illuminate\Http\Response
      */
-    public function show(Requester $requester)
+    public function show(Student $student)
     {
         //
     }
@@ -52,10 +52,10 @@ class RequesterController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Requester  $requester
+     * @param  \App\Student  $student
      * @return \Illuminate\Http\Response
      */
-    public function edit(Requester $requester)
+    public function edit(Student $student)
     {
         //
     }
@@ -64,10 +64,10 @@ class RequesterController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Requester  $requester
+     * @param  \App\Student  $student
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Requester $requester)
+    public function update(Request $request, Student $student)
     {
         //
     }
@@ -75,10 +75,10 @@ class RequesterController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Requester  $requester
+     * @param  \App\Student  $student
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Requester $requester)
+    public function destroy(Student $student)
     {
         //
     }

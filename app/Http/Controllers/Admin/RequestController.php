@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
-use App\Result;
+use App\Request as RequestModel;
 use Illuminate\Http\Request;
 
-class ResultController extends Controller
+class RequestController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class ResultController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.requests.index');
     }
 
     /**
@@ -41,10 +41,10 @@ class ResultController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Result  $result
+     * @param  \App\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function show(Result $result)
+    public function show(Request $request)
     {
         //
     }
@@ -52,10 +52,10 @@ class ResultController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Result  $result
+     * @param  \App\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function edit(Result $result)
+    public function edit(Request $request)
     {
         //
     }
@@ -64,10 +64,10 @@ class ResultController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Result  $result
+     * @param  \App\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Result $result)
+    public function update(Request $request, RequestModel $requestModel)
     {
         //
     }
@@ -75,10 +75,10 @@ class ResultController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Result  $result
+     * @param  \App\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Result $result)
+    public function destroy(Request $request)
     {
         //
     }

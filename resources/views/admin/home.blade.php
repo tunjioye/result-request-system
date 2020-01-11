@@ -15,6 +15,7 @@
                 @includeIf('shared.admin-sidenav', ['activeUrl' => '/admin/home'])
             </card>
         </div>
+
         <div class="col-md-8">
             <div class="row">
                 <div class="col-md-6 mb-4">
