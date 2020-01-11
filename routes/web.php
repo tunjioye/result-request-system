@@ -17,7 +17,18 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::namespace('Admin')->group(function () {
+    // Controllers Within The "App\Http\Controllers\Admin" Namespace
+    Route::prefix('admin')->group(function () {
+        // Matches The "/admin/:url" URL
+        Route::name('admin.')->group(function () {
+            // Matches The "admin.{view}" URL
+            Route::get('/home', 'HomeController@index')->name('home');
+            Route::get('/profile', 'HomeController@profile')->name('profile');
+            Route::post('/profile/update', 'HomeController@update_profile')->name('profile.update');
+        });
+    });
+});
 
 Route::get('/request-result', 'PublicController@requestResult')->name('request-result');
 Route::get('/check-request-status', 'PublicController@checkRequestStatus')->name('check-request-status');
