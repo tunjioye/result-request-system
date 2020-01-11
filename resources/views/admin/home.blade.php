@@ -42,12 +42,6 @@
                     <stats-card title="{{ \App\School::count() }}" description="number of schools"></stats-card>
                 </div>
             </div>
-
-            <div class="mb-2"><br/></div>
-
-            <card heading="Dashboard">
-                You are logged in!
-            </card>
         </div>
     </div>
 </div>
