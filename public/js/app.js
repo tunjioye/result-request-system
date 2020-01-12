@@ -1850,7 +1850,7 @@ __webpack_require__.r(__webpack_exports__);
     heading: {
       type: String,
       "default": function _default() {
-        return 'Card Title';
+        return 'Card Heading';
       }
     },
     noPadding: {

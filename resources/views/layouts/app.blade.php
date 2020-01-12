@@ -16,6 +16,10 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <style type="text/css">
+        .table-wrapper {
+            overflow-x: auto;
+        }
+
         .list-group-item.sidenav-active {
             background-color: #f7f7f7;
             font-weight: bolder;
@@ -88,10 +92,19 @@
     </div>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/app.js') }}"></script>
     <script type="text/javascript">
         // Alerts for Notifications
         $('.alert').alert();
+
+        // Confirm Action
+        $('.confirm-action').click(function(e) {
+            var ans = confirm('Are You Sure?');
+            if (ans) {
+            } else {
+                e.preventDefault();
+            }
+        });
     </script>
 </body>
 </html>

@@ -24,6 +24,23 @@ class Request extends Model
         //
     ];
 
+    public static function statusClass($requestSattus) {
+        switch ($requestSattus) {
+            case 'REJECTED':
+                return 'text-danger';
+                break;
+
+            case 'SUCCESS':
+                return 'text-success';
+                break;
+
+            case 'PENDING':
+            default:
+                return 'text-secondary';
+                break;
+        }
+    }
+
     /**
      * Get the requester of the request.
      */

@@ -11,7 +11,7 @@
             heading: {
                 type: String,
                 default: function () {
-                    return 'Card Title'
+                    return 'Card Heading'
                 }
             },
             noPadding:{
