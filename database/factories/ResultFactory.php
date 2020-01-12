@@ -15,7 +15,7 @@ $factory->define(Result::class, function (Faker $faker) {
         ]),
         'year_received' => $faker->year,
         'description' => $faker->text(120),
-        'file' => $faker->file(public_path('/preuploads'), public_path('/uploads')),
+        'file' => explode('/public', $faker->file(public_path('/preuploads'), public_path('/uploads')))[1],
         'status' => $faker->boolean
     ];
 });
