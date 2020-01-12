@@ -14,7 +14,7 @@ class ResultController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.results.index');
     }
 
     /**

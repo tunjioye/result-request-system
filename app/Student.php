@@ -25,6 +25,14 @@ class Student extends Model
     ];
 
     /**
+     * Get the full name of the student.
+     */
+    public function fullName()
+    {
+        return $this->first_name . ' ' . $this->last_name;
+    }
+
+    /**
      * Get the school of the student.
      */
     public function school()

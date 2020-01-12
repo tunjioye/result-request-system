@@ -24,7 +24,13 @@ class Request extends Model
         //
     ];
 
-    public static function statusClass($requestSattus) {
+    /**
+     * Returns the statusClass text color
+     *
+     * @param String $requestSattus
+     * @return void
+     */
+    public static function statusClass(String $requestSattus) {
         switch ($requestSattus) {
             case 'REJECTED':
                 return 'text-danger';
