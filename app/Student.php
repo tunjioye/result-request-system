@@ -45,7 +45,7 @@ class Student extends Model
      */
     public function requests()
     {
-        return $this->hasManys('App\Request');
+        return $this->hasMany('App\Request');
     }
 
     /**
@@ -53,6 +53,6 @@ class Student extends Model
      */
     public function results()
     {
-        return $this->hasManys('App\Result');
+        return $this->hasMany('App\Result');
     }
 }

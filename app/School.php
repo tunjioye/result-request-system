@@ -29,7 +29,7 @@ class School extends Model
      */
     public function students()
     {
-        return $this->hasManys('App\Student');
+        return $this->hasMany('App\Student');
     }
 
     /**
@@ -37,6 +37,6 @@ class School extends Model
      */
     public function results()
     {
-        return $this->hasManys('App\Result');
+        return $this->hasMany('App\Result');
     }
 }

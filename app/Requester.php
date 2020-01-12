@@ -29,6 +29,6 @@ class Requester extends Model
      */
     public function requests()
     {
-        return $this->hasManys('App\Request');
+        return $this->hasMany('App\Request');
     }
 }

@@ -49,3 +49,7 @@ Route::namespace('Admin')->group(function () {
 Route::get('/request-result', 'PublicController@requestResult')->name('request-result');
 Route::get('/check-request-status', 'PublicController@checkRequestStatus')->name('check-request-status');
 Route::get('/check-result', 'PublicController@checkResult')->name('check-result');
+
+Route::post('/request-result', 'PublicController@requestResultProcess');
+Route::post('/check-request-status', 'PublicController@checkRequestStatusProcess');
+Route::post('/check-result', 'PublicController@checkResultProcess');

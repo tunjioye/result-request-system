@@ -45,6 +45,6 @@ class Result extends Model
      */
     public function request_messages()
     {
-        return $this->hasManys('App\RequestMessage');
+        return $this->hasMany('App\RequestMessage');
     }
 }
