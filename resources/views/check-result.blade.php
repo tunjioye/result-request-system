@@ -1,5 +1,12 @@
 @extends('layouts.app')
 
+@php
+    $result_types = [
+        'MSc DEGREE', 'BEd DEGREE', 'BSc DEGREE', 'BA DEGREE',
+        'WAEC', 'NECO', 'NABTEB', 'WAEC GCE', 'NECO GCE'
+    ];
+@endphp
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -8,36 +15,53 @@
 
             <br/>
 
-            <card heading="Check Result Form">                
-                <form role="form">
-                    <label for="select">Choose Institution</label><span class="text-danger">*</span>
-                    <Select class="form-control" id="select">
-                        <option  selected disabled>Choose Institution</option>
-                        <option >University of Ilorin</option>
-                        <option >University of Ibadan</option>
-                        <option >University of Osun</option>
-                        <option >University of Lagos</option>
-                        </Select><br>
+            <card heading="Check Result Form">
+                <form role="form" action="" method="POST">
+                    {{ csrf_field() }}
+
                     <div class="form-group">
-                        <label for="matric">Student MatricNo</label><span class="text-danger">*</span>
-                        <input type="text" class="form-control" placeholder="Enter Student MatricNo" id="matric" Required>
+                        <label for="select">Select School</label> <span class="text-danger">*</span>
+                        <Select class="form-control" name="school_name">
+                            @foreach (App\School::all()->sortBy('school_name') as $item)
+                                <option value="{{ $item->school_name }}">{{ $item->school_name }}</option>
+                            @endforeach
+                        </Select>
                     </div>
-                    
+
                     <div class="form-group">
-                        <label for="name">Student Name</label><span class="text-danger">*</span>
-                        <input type="text" class="form-control"  placeholder="Enter Student Name" id="name" Required>  
+                        <label for="matric">Student MatricNo</label> <span class="text-danger">*</span>
+                        <input type="text" class="form-control" placeholder="Enter Student MatricNo" name="matric_number" required>
                     </div>
+
+                    {{-- <div class="form-group">
+                        <label for="name">Student First Name</label> <span class="text-danger">*</span>
+                        <input type="text" class="form-control" placeholder="Enter Student First Name" name="first_name" required>
+                    </div>
+
                     <div class="form-group">
-                        <label for="type">Result Type</label><span class="text-danger">*</span>
-                        <input type="email" class="form-control"  placeholder="Enter Result Type" id="type" Required>  
+                        <label for="name">Student Last Name</label> <span class="text-danger">*</span>
+                        <input type="text" class="form-control" placeholder="Enter Student Last Name" name="last_name" required>
+                    </div> --}}
+
+                    <div class="form-group">
+                        <label for="type">Result Type</label> <span class="text-danger">*</span>
+                        <Select class="form-control" name="result_type">
+                            @foreach (collect($result_types)->sort() as $item)
+                                <option value="{{ $item }}">{{ $item }}</option>
+                            @endforeach
+                        </Select>
                     </div>
+
                     <div class="form-group">
                         <label for="year">Year Received</label>
-                        <input type="text" class="form-control"  placeholder="Enter Year Received" id="year" Required>
+                        <input type="text" class="form-control" placeholder="Enter Year Received" name="year_recived" required>
                     </div>
                 </form>
-               
-            </card><br/>
+
+            </card>
+
+            <br/>
+
             <div class="col-md-12 text-center">
                 <button type="submit" class="btn btn-outline-dark">Submit</button>
             </div>

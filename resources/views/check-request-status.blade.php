@@ -17,7 +17,7 @@
                             <div class="form-group">
                                 <label for="track" class="">Request Tracking Number <span class="text-danger">*</span></label><br/>
                                 <div class="input-group">
-                                    <input type="text" class="form-control"  placeholder="Enter Request Tracking Number" id="track" name="tracking_number" />
+                                    <input type="text" class="form-control" placeholder="Enter Request Tracking Number" id="track" name="tracking_number" required />
                                     <div class="input-group-append">
                                         <button type="submit" class="btn btn-outline-dark">Check Status</button>
                                     </div>
@@ -29,7 +29,5 @@
             </card>
         </div>
     </div>
-    <style>
-    </style>
 </div>
 @endsection

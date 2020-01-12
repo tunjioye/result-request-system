@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Request as RequestModel;
 use Str;
+use App\Result;
 
 class PublicController extends Controller
 {
@@ -30,6 +31,10 @@ class PublicController extends Controller
 
     public function checkRequestStatusProcess(Request $request)
     {
+        $request->validate([
+            'tracking_number' => 'required|string'
+        ]);
+
         $requestedRequest = RequestModel::where('tracking_number', $request->tracking_number)->first();
 
         switch ($requestedRequest->status) {
@@ -54,12 +59,21 @@ class PublicController extends Controller
                 break;
         }
 
-
         return redirect()->back();
     }
 
     public function checkResultProcess(Request $request)
     {
+        $request->validate([
+            'school_name' => 'required|string',
+            'matric_number' => 'required|string',
+            'first_name' => 'nullable|string',
+            'last_name' => 'nullable|string',
+            'result_type' => 'required|string',
+            'year_received' => 'required|date_format:Y'
+        ]);
+
+        // to be continued ...
         return redirect()->back();
     }
 }
