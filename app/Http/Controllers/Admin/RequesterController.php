@@ -14,7 +14,7 @@ class RequesterController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.requesters.index');
     }
 
     /**

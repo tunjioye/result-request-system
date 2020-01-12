@@ -30,6 +30,18 @@ Route::namespace('Admin')->group(function () {
 
             // Manage Requests
             Route::resource('/requests', 'RequestController');
+
+            // Manage Requesters
+            Route::resource('/requesters', 'RequesterController');
+
+            // Manage Results
+            Route::resource('/results', 'ResultController');
+
+            // Manage Students
+            Route::resource('/students', 'StudentController');
+
+            // Manage Schools
+            Route::resource('/schools', 'SchoolController');
         });
     });
 });

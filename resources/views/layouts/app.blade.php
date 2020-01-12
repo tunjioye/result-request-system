@@ -19,6 +19,10 @@
         .table-wrapper {
             overflow-x: auto;
         }
+        .table-wrapper th,
+        .table-wrapper td {
+            white-space: nowrap;
+        }
 
         .list-group-item.sidenav-active {
             background-color: #f7f7f7;
