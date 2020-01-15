@@ -27,7 +27,7 @@
                         <thead class="thead-light">
                             <tr>
                                 <th style="width: 1rem;">#</th>
-                                <th>Tracing No</th>
+                                <th>Tracking No</th>
                                 <th>Result Type</th>
                                 <th>Year Received</th>
                                 <th>Status</th>
@@ -39,7 +39,7 @@
                             @forelse ($requests as $item)
                                 <tr>
                                     <td style="width: 1rem;">{{ $loop->iteration }}</td>
-                                    <td><code>{{ Str::upper($item->tracking_number) }}</code></td>
+                                    <td><code>{{ $item->tracking_number }}</code></td>
                                     <td><kbd>{{ Str::upper($item->result_type) }}</kbd></td>
                                     <td>{{ optional($item)->year_received }}</td>
                                     <td><small class="{{ App\Request::statusClass($item->status) }}">{{ $item->status }}</small></td>

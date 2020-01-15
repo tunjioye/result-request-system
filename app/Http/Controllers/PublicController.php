@@ -36,8 +36,9 @@ class PublicController extends Controller
         ]);
 
         $requestedRequest = RequestModel::where('tracking_number', $request->tracking_number)->first();
+        $requestStatus = optional($requestedRequest)->status ?? '';
 
-        switch ($requestedRequest->status) {
+        switch ($requestStatus) {
             case 'REJECTED':
                 if (Str::length($requestedRequest->reason) > 0) {
                     session()->flash('error', 'Your Request Status is <strong>REJECTED</strong>. <br/>REASON : ' . $requestedRequest->reason);
