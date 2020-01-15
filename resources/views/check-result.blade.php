@@ -20,7 +20,7 @@
                         <label for="school">Select School</label> <span class="text-danger">*</span>
                         <Select class="form-control" name="school" required>
                             <option value="">Select School</option>
-                            @foreach (App\School::has('students', '>' , 1)->with('students')->get()->sortBy('school_name') as $item)
+                            @foreach (App\School::has('students')->get()->sortBy('school_name') as $item)
                                 <option value="{{ $item->id }}">{{ $item->school_name }}</option>
                             @endforeach
                         </Select>
