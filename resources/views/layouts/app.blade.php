@@ -30,6 +30,11 @@
             border-radius: 0 !important;
         }
     </style>
+
+    {{-- Page Styles --}}
+    @if( View::hasSection('page_styles') )
+        @yield('page_styles')
+    @endif
 </head>
 <body>
     <div id="app">
@@ -110,5 +115,10 @@
             }
         });
     </script>
+
+    {{-- Page Scripts --}}
+    @if( View::hasSection('page_scripts') )
+        @yield('page_scripts')
+    @endif
 </body>
 </html>

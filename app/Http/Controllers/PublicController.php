@@ -66,15 +66,33 @@ class PublicController extends Controller
     public function checkResultProcess(Request $request)
     {
         $request->validate([
-            'school_name' => 'required|string',
-            'matric_number' => 'required|string',
-            'first_name' => 'nullable|string',
-            'last_name' => 'nullable|string',
+            'school' => 'required',
+            'student' => 'required',
             'result_type' => 'required|string',
-            'year_received' => 'required|date_format:Y'
+            'year_received' => 'nullable|date_format:Y'
         ]);
 
-        // to be continued ...
+        $requestedResult = [];
+
+        if (isset($request->year_received)) {
+            $requestedResult = Result::where('student_id', $request->student)
+                ->where('result_type', $request->result_type)
+                ->where('year_received', $request->year_received)
+                ->first();
+        } else {
+            $requestedResult = Result::where('student_id', $request->student)
+                ->where('result_type', $request->result_type)
+                ->first();
+        }
+
+        $resultFile = optional($requestedResult)->file ?? '';
+
+        if ($resultFile) {
+            session()->flash('success', 'The Result you requested is <strong>FOUND</strong>. <a href="' . asset($resultFile) . '" target="_blank" rel="noreferrer noopener">preview result</a>');
+        } else {
+            session()->flash('error', 'The Result you requested was <strong>NOT FOUND</strong>. If you like, you can <a href="' . url('/request-result') . '">request for thr result here</a>');
+        }
+
         return redirect()->back();
     }
 }
