@@ -1,10 +1,7 @@
 @extends('layouts.app')
 
 @php
-    $result_types = [
-        'MSc DEGREE', 'BEd DEGREE', 'BSc DEGREE', 'BA DEGREE',
-        'WAEC', 'NECO', 'NABTEB', 'WAEC GCE', 'NECO GCE'
-    ];
+    $result_types = App\Result::getResultTypes();
 @endphp
 
 @section('content')

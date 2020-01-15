@@ -25,6 +25,25 @@ class Result extends Model
     ];
 
     /**
+     * get currently accepted result types
+     *
+     * @return array
+     */
+    public static function getResultTypes() {
+        return [
+            'BA DEGREE',
+            'BEd DEGREE',
+            'BSc DEGREE',
+            'MSc DEGREE',
+            'NABTEB',
+            'NECO GCE',
+            'NECO',
+            'WAEC GCE',
+            'WAEC'
+        ];
+    }
+
+    /**
      * Get the school associated with the result.
      */
     public function school()

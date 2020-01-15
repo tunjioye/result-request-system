@@ -1,10 +1,7 @@
 @extends('layouts.app')
 
 @php
-    $result_types = [
-        'MSc DEGREE', 'BEd DEGREE', 'BSc DEGREE', 'BA DEGREE',
-        'WAEC', 'NECO', 'NABTEB', 'WAEC GCE', 'NECO GCE'
-    ];
+    $result_types = App\Result::getResultTypes();
 @endphp
 
 @section('content')
@@ -21,27 +18,17 @@
 
                     <div class="form-group">
                         <label for="select">Select School</label> <span class="text-danger">*</span>
-                        <Select class="form-control" name="school_name">
+                        <Select class="form-control" name="school_id">
                             @foreach (App\School::all()->sortBy('school_name') as $item)
-                                <option value="{{ $item->school_name }}">{{ $item->school_name }}</option>
+                                <option value="{{ $item->id }}">{{ $item->school_name }}</option>
                             @endforeach
                         </Select>
                     </div>
 
                     <div class="form-group">
-                        <label for="matric">Student MatricNo</label> <span class="text-danger">*</span>
-                        <input type="text" class="form-control" placeholder="Enter Student MatricNo" name="matric_number" required>
+                        <label for="matric">Select Student</label> <span class="text-danger">*</span>
+                        <input type="text" class="form-control" placeholder="Enter Student" name="student_id" required>
                     </div>
-
-                    {{-- <div class="form-group">
-                        <label for="name">Student First Name</label> <span class="text-danger">*</span>
-                        <input type="text" class="form-control" placeholder="Enter Student First Name" name="first_name" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="name">Student Last Name</label> <span class="text-danger">*</span>
-                        <input type="text" class="form-control" placeholder="Enter Student Last Name" name="last_name" required>
-                    </div> --}}
 
                     <div class="form-group">
                         <label for="type">Result Type</label> <span class="text-danger">*</span>
