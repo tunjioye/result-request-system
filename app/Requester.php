@@ -25,6 +25,18 @@ class Requester extends Model
     ];
 
     /**
+     * get currently accepted requester types
+     *
+     * @return array
+     */
+    public static function getRequesterTypes() {
+        return [
+            'COMPANY',
+            'UNIVERSITY'
+        ];
+    }
+
+    /**
      * Get the requests of the requester.
      */
     public function requests()
